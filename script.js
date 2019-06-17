@@ -12,10 +12,13 @@ while (number < 1 || notValidNum(number)) {
     number = parseInt(prompt('Please enter positive integer number once again', '8'));
 }
 
-let factorial = (num) => {
-    if (num === 1) {
-        return num;
-    } else { return (num = num * factorial(num - 1))}
-}
+// let factorial = (num) => {
+//     if (num === 1) {
+//         return num;
+//     } else { return (num = num * factorial(num - 1))}
+// }
+
+let factorial = num => num === 1 ? num : num * factorial(num - 1);
+
 
 document.getElementById('main').innerHTML = `The factorial of ${number} is: ${factorial(number)}`;
