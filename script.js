@@ -8,8 +8,8 @@ let number = parseInt(prompt('please enter number', '8'));
 
 let notValidNum = num => isNaN (num);
 
-while (notValidNum(number)) {
-    number = parseInt(prompt('Please enter integer number once again', '8'));
+while (number < 1 || notValidNum(number)) {
+    number = parseInt(prompt('Please enter positive integer number once again', '8'));
 }
 
 let factorial = (num) => {
